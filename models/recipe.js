@@ -33,6 +33,6 @@ module.exports = (sequelize, DataTypes) => {
   )
   return Recipe
 }
-Recipe.associate = function (models) {
+/* Recipe.associate = function (models) {
   Recipe.belongsTo(models.User, { foreignKey: 'userId' })
-}
+} */
