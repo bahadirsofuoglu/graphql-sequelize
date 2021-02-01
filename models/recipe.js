@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate (models) {
-      // define association here
+      Recipe.associate = function (models) {
+        Recipe.belongsTo(models.User, { foreignKey: 'userId' })
+      }
     }
   }
   Recipe.init(
@@ -33,6 +35,3 @@ module.exports = (sequelize, DataTypes) => {
   )
   return Recipe
 }
-/* Recipe.associate = function (models) {
-  Recipe.belongsTo(models.User, { foreignKey: 'userId' })
-} */

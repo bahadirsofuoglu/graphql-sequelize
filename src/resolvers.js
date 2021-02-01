@@ -1,4 +1,5 @@
 const bcrypt = require('bcryptjs')
+
 const resolvers = {
   Query: {
     async user (root, { id }, { models }) {
